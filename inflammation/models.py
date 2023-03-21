@@ -10,7 +10,7 @@ and each column represents a single day across all patients.
 import numpy as np
 
 
-def load_csv(filename):
+def load_csv(filename: str):
     """Load a Numpy array from a CSV
 
     :param filename: Filename of CSV to load
@@ -18,17 +18,25 @@ def load_csv(filename):
     return np.loadtxt(fname=filename, delimiter=',')
 
 
-def daily_mean(data):
-    """Calculate the daily mean of a 2d inflammation data array."""
+def daily_mean(data: np.ndarray):
+    """Calculate the daily mean of a 2d inflammation data array.
+
+    :param data: array with the input data
+    """
     return np.mean(data, axis=0)
 
 
-def daily_max(data):
-    """Calculate the daily max of a 2d inflammation data array."""
+def daily_max(data: np.ndarray):
+    """Calculate the daily max of a 2d inflammation data array.
+
+    :param data: array with the input data
+    """
     return np.max(data, axis=0)
 
 
-def daily_min(data):
-    """Calculate the daily min of a 2d inflammation data array."""
-    return np.min(data, axis=0)
+def daily_min(data: np.ndarray):
+    """Calculate the daily min of a 2d inflammation data array.
 
+    :param data: array with the input data
+    """
+    return np.min(data, axis=0)
