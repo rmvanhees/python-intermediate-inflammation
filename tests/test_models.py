@@ -64,6 +64,7 @@ def test_daily_min_string():
     with pytest.raises(TypeError):
         _ = daily_min([['Hello', 'there'], ['General', 'Kenobi']])
 
+
 @pytest.mark.parametrize(
     "test, expected",
     [
